@@ -142,6 +142,14 @@
 
 ### Merging
 
+#### Replacing Master branch with another branch
+
+    git checkout better_branch
+    git merge --strategy=ours --no-commit master
+    git commit      # Add a message regarding the replacement that you just did
+    git checkout master
+    git merge better_branch             # fast-forward master up to the merge
+
 #### Merging with stash
 
     # This is the path to least resistance with git
